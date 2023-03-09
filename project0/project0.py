@@ -1,9 +1,9 @@
 import re
-import sqlite3
-import requests
 from typing import List
+import sqlite3
 from io import BytesIO
 import PyPDF4
+import requests
 # from PyPDF4 import PdfFileReader
 
 
@@ -53,17 +53,18 @@ def extractincidents(binary_data)->List[list[str]]:
     return data
 
 def createdb():
-    connection = sqlite3.connect('normanpd.db')
-    cursor = connection.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS incidents (
+    con = sqlite3.connect('normanpd.db')
+    cur = con.cursor()
+    cur.execute('DROP TABLE if exists incidents')
+    cur.execute('''CREATE TABLE incidents (
         incident_time TEXT,
         incident_number TEXT,
         incident_location TEXT,
         nature TEXT,
         incident_ori TEXT
     )''')
-    connection.commit()
-    return connection
+    con.commit()
+    return con
 
 def populatedb(db, data):
     with db:
@@ -77,15 +78,15 @@ def populatedb(db, data):
            # print(row)
 
 def status(db):
-    cursor = db.cursor()
-    cursor.execute('''
+    cur = db.cursor()
+    cur.execute('''
         SELECT nature, COUNT(*) as count
         FROM incidents
         GROUP BY nature
         ORDER BY count DESC, nature
     ''')
-    rows = cursor.fetchall()
-    for row in rows:
-        print(f"{row[0]}|{row[1]}")
+    total_rows = cur.fetchall()
+    for i in total_rows:
+        print(f"{i[0]}|{i[1]}")
     db.commit()
     db.close()
