@@ -111,6 +111,6 @@ or
 4. The code have assumed data to be complete.However, there might be a case of missing values. In such cases,the code may not produce exact desired outcome.
 
 ## how to run
-![gif](https://www.canva.com/design/DAFcptxbzVk/SOkNpKzJ7oyH_TsPUdVuWg/watch?utm_content=DAFcptxbzVk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+<img src="[https://link-to-your-gif.gif](https://www.canva.com/design/DAFcptxbzVk/SOkNpKzJ7oyH_TsPUdVuWg/watch?utm_content=DAFcptxbzVk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)" alt="Alt Text">
 
 
