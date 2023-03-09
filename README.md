@@ -111,7 +111,8 @@ or
 4. The code have assumed data to be complete.However, there might be a case of missing values. In such cases,the code may not produce exact desired outcome.
 
 ## how to run
-![Gif of code runnning](https://www.canva.com/design/DAFcptxbzVk/YDXMv2mvwXX1Z2kM50Wglw/watch)
+![Untitled design](https://user-images.githubusercontent.com/124123388/223893438-db9a5440-5ba9-40e5-b538-93a8fa931e31.gif)
+
 
 
 
